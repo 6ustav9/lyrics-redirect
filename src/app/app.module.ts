@@ -10,13 +10,17 @@ import { SongsComponent } from './components/songs/songs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BandsService } from './components/bands/bands.service';
 import { SongsService } from './components/songs/songs.service';
+import { MoreComponent } from './components/more/more.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     BandsComponent,
-    SongsComponent
+    SongsComponent,
+    MoreComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,77 @@
+@import "../../sass/variables.sass"
+
+.more
+    display: flex
+    flex-flow: column
+    align-items: center
+    .more__title
+        font-family: $architects-daughter
+        font-size: $title1-section-size-desktop-default
+        text-align: center
+        font-weight: $title1-weight-desktop-default
+        letter-spacing: .15rem
+        margin: 10px 0 
+    .more__message
+        flex-flow: column
+        display: flex
+        .more__message__text
+            font-family: $kalam-family
+            font-size: 1.1rem
+            letter-spacing: $letter-spacing-default
+            line-height: $line-height-default   
+            text-align: center
+            word-spacing: $word-spacing-default
+            margin: 8px 10px
+
+    .more-container
+        display: flex
+        .more__list
+            // margin: 10px 0px
+            .more__list__item
+                background: $old-silver
+                border-radius: .5rem
+                margin: 10px 10px
+                padding: 20px
+                .more__list__item__iframe
+                    width: 200%
+                    height: 100px
+                    margin-bottom: -48px
+
+                    //Configuração zoom iframe Interno
+                    zoom: 5
+                    //Configuração tamanho iframe Interno
+                    -moz-transform: scale(0.5)
+                    -moz-transform-origin: 0 0
+                    -o-transform: scale(0.5)
+                    -o-transform-origin: 0 0
+                    -webkit-transform: scale(0.5)
+                    -webkit-transform-origin: 0 0
+                .more__list__item__info
+                    height: 10.5rem  //limitador de altura do card, altere se necessario
+                    .more__list__item__info__name
+                        font-family: $shadows-light-family
+                        font-weight: $title1-weight-desktop-default
+                        font-size: 1.5rem
+                        margin-bottom: 10px
+                    .more__list__item__info__description    
+                        font-family: $shadows-light-family
+                        font-size: 1.3rem
+                        line-height: 1.5rem
+                        margin-bottom: 10px
+                    .more__list__item__info__user-github
+                        font-family: $indie-flower-family
+                        font-weight: $title1-weight-desktop-default
+                        font-size: 1.2rem
+                        margin-bottom: 10px
+                    .more__list__item__info__github-project  
+                        font-family: $indie-flower-family
+                        font-size: .8rem
+                        text-decoration: none
+                        color: $black
+
+                &:only-child
+                    letter-spacing: .15rem
+                    width: 370px
+                    padding: 25px 15px
+                    text-align: center
+                    

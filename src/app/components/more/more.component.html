@@ -1,0 +1,27 @@
+<div class="more">
+    <h1 class="more__title">Projetos Anteriores</h1>
+    <div class="more__message">
+        <p class="more__message__text">Conheça as versões anteriores deste projeto...</p>
+        <p class="more__message__text">Esta versão utiliza Angular Cli 14, Sass e Json Server...</p>
+        <div class="more-container">
+            <div class="more__list" 
+                *ngFor="let pvl of project_version_links">
+                <div class="more__list__item">
+                    <iframe [src]="pvl.link | safe: 'resourceUrl'"
+                            class="more__list__item__iframe"
+                            scrolling="no"
+                            ></iframe>
+                    <div class="more__list__item__info">
+                        <h3 class="more__list__item__info__name">{{pvl.name}}</h3>
+                        <h3 class="more__list__item__info__description">{{pvl.description}}</h3>
+                        <h3 class="more__list__item__info__user-github">{{pvl.githubUser}}</h3>
+                        <a href={{pvl.githubProject}} class="more__list__item__info__github-project">{{pvl.githubProject}}</a>
+                    </div>
+                </div>
+        
+            </div>
+            
+        </div>
+        <p class="more__message__text">Obrigado, pela visita!!!</p>
+    </div>
+</div>
