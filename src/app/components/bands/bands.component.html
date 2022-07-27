@@ -1,0 +1,24 @@
+
+<!-- 
+    Para que a diretiva ngFor seja visivel é necessario 
+    que o componente esteja importado nos Modulos 
+-->
+<h1 class="band__title">{{title}}</h1>
+<div class="bands-container">
+    <div class="band__list" 
+        *ngFor="let band of bands">
+
+        <a class="band__list__item" href="{{band.linkSong}}/songs">    
+            <img src="{{band.image}}" 
+            alt={{band.name}} 
+            class="band__list__item__image">
+            <h2 class="band__list__item__name">{{band.name}}</h2>
+            <h3 class="band__list__item__genres">{{band.genres}}</h3>
+            <h3 class="band__list__item__integrants">{{band.integrants}}</h3>
+            <h3 class="band__list__item__country-formation">{{band.countryFormation}}</h3>
+            <h3 class="band__list__item__year-formation">{{band.yearFormation}}</h3>
+            <h3 class="band__list__item__country-finalization">{{band.yearFinalization}}</h3>
+        </a>
+    </div>
+    
+</div>

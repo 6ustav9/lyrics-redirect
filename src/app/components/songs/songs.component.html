@@ -1,0 +1,25 @@
+<!-- 
+    Para que a diretiva ngFor seja visivel é necessario 
+    que o componente esteja importado nos Modulos 
+-->
+<h1 class="songs__title">MUSICAS - {{bandname ? bandname.split('-').join(' ') : bandname}}</h1>
+<div class="songs-container">
+    <div *ngIf="songs.length > 0; then songsData else dontHaveSongs" class="have-songs"></div>
+    <ng-template #songsData>
+        <div class="song__list" 
+            *ngFor="let song of songs">
+            <a class="song__list__item" href="{{song.urlAZL}}" target="_blank">    
+                <img src="../../../../../assets/images/cover-front/{{song.imageCover}}" 
+                alt={{song.name}} 
+                class="song__list__item__image">
+                <h2 class="song__list__item__name">{{song.name}}</h2>
+                <h2 class="song__list__item__album">{{song.album}}</h2>
+                <h2 class="song__list__item__year-realease">{{song.yearRelease}}</h2>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template #dontHaveSongs>
+        <h2>Não possui musicas Cadastradas  </h2>
+    </ng-template>
+    
+</div>

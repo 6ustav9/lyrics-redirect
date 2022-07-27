@@ -1,0 +1,88 @@
+@import "../../sass/variables.sass"
+
+.band__title
+    font-family: $architects-daughter
+    font-size: $title1-section-size-desktop-default
+    text-align: center
+    font-weight: $title1-weight-desktop-default
+    letter-spacing: .15rem
+
+.bands-container
+    display: flex
+    flex-flow: wrap
+    margin-top: 25px
+    justify-content: center
+    .band__list
+        display: flex
+        background: $old-silver
+        margin: 10px
+        border-radius: .5rem
+        transition: all 1s ease-in-out
+
+        // pares
+        &:nth-child(even)
+            &:hover
+                transform: scale(1.08) rotate(-3deg)
+                background: $granite-gray
+                transition: all 1s ease-in-out
+        //impares
+        &:nth-child(odd)
+            &:hover
+                transform: scale(1.08) rotate(3deg)
+                background: $granite-gray
+                transition: all 1s ease-in-out
+            
+
+        .band__list__item
+            margin: 15px 
+            color: $black
+            text-decoration: none
+
+            .band__list__item__name
+                font-family: $cinzel-family
+                font-size: 1.3rem
+                font-weight: $title1-weight-desktop-default
+                text-align: center
+                color: $black
+                margin: 10px 0
+                
+            .band__list__item__image
+                height: 220px
+                width: 280px
+                object-fit: cover
+
+            .band__list__item__genres
+                font-family: $indie-flower-family
+                letter-spacing: .1rem
+                font-style: italic
+                font-size: 1.1rem
+                text-align: center
+                width: 260px
+                margin: 10px 0
+
+            .band__list__item__integrants
+                font-family: $shadows-light-family
+                font-size: 1.1rem
+                text-align: center
+                letter-spacing: .15rem
+                width: 260px
+                margin: 5px 0
+
+            .band__list__item__country-formation
+                font-family: $kalam-family
+                font-style: italic
+                font-size: 1.1rem
+                letter-spacing: .1rem
+                font-weight: $title1-weight-desktop-default
+                text-align: center
+                margin: 10px 0
+            .band__list__item__country-finalization
+                font-family: $kalam-family
+                font-size: 1.1rem
+                text-align: center
+                margin: 5px
+            .band__list__item__year-formation
+                font-family: $kalam-family
+                font-size: 1.1rem
+                text-align: center
+                margin: 5px

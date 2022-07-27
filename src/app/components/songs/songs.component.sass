@@ -1,0 +1,75 @@
+@import "../../sass/variables.sass"
+
+.songs__title
+    font-family: $architects-daughter
+    font-size: $title1-section-size-desktop-default
+    text-align: center
+    font-weight: $title1-weight-desktop-default
+    letter-spacing: .15rem
+
+.songs-container
+    display: flex
+    flex-flow: wrap
+    justify-content: center
+    margin-top: 25px
+
+    .song__list
+        background: $old-silver
+        border-radius: .5rem
+        margin: 10px 15px
+        transition: all 1s ease-in-out
+        
+        // pares
+        &:nth-child(even)
+            &:hover
+                background: $granite-gray
+                transform: scale(1.08) rotate(-3deg)
+                transition: all 1s ease-in-out
+        //impares
+        &:nth-child(odd)
+            &:hover
+                background: $granite-gray
+                transform: scale(1.08) rotate(3deg)
+                transition: all 1s ease-in-out
+
+        .song__list__item
+            display: flex
+            flex-flow: column
+            text-decoration: none
+            margin: 15px
+
+            .song__list__item__image
+                height: 200px
+            .song__list__item__name
+                font-family: $kalam-family
+                font-weight: $title1-weight-desktop-default
+                font-style: italic
+                letter-spacing: .15rem
+                font-size: 1.1rem
+                color: $black
+                text-align: center
+                margin-top: 15px
+
+            .song__list__item__album
+                font-family: $indie-flower-family
+                font-size: 1.1rem
+                letter-spacing: .1rem
+                color: $black
+                text-align: center
+                margin-top: 8px
+                line-height: 1.4rem
+
+            .song__list__item__year-realease
+                font-family: $indie-flower-family
+                font-weight: $title1-weight-desktop-default
+                font-size: 1.1rem
+                letter-spacing: .1rem
+                color: $black
+                text-align: center
+                margin-top: 8px
+                line-height: 1.4rem
+            &:only-child
+                width: 200px
+                text-align: center
+            
+                

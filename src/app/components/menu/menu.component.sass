@@ -1,0 +1,30 @@
+@import "../../sass/variables.sass"
+
+.main-menu
+    display: flex
+    justify-content: center
+    background: $american-silver
+    justify-content: space-between
+    padding: 3px 20px
+
+    .main-menu__logo
+        display: flex
+        align-items: center
+        .main-menu__logo__img
+            margin: 8px 10px
+            height: 2.7rem
+        .main-menu__logo__text
+            font-size: $font-logo-desktop-default
+    .main-menu__list
+        display: flex
+        margin: 10px 5px
+        align-items: center
+
+        .main-menu__list__item
+            margin: .3rem .8rem 
+            list-style: none
+
+            .main-menu__list__item__link
+                text-decoration: none
+                color: $black
+                font-size: $font-desktop-default
