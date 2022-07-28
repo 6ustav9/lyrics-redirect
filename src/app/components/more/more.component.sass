@@ -48,11 +48,16 @@
                     -webkit-transform-origin: 0 0
                 .more__list__item__info
                     height: 10.5rem  //limitador de altura do card, altere se necessario
-                    .more__list__item__info__name
-                        font-family: $shadows-light-family
-                        font-weight: $title1-weight-desktop-default
-                        font-size: 1.5rem
-                        margin-bottom: 10px
+                    .more__list__item__info__link
+                        text-decoration: none
+                        color: $black
+                        &:hover
+                            color: $blood-red
+                        .more__list__item__info__link__name
+                            font-family: $shadows-light-family
+                            font-weight: $title1-weight-desktop-default
+                            font-size: 1.5rem
+                            margin-bottom: 10px
                     .more__list__item__info__description    
                         font-family: $shadows-light-family
                         font-size: 1.3rem
