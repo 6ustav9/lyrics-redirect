@@ -10,7 +10,7 @@ import { Song } from './song';
 })
 export class SongsService {
 
-  urlAPI = 'https://json-database-lyrics-redirect.herokuapp.com';
+  urlAPI = 'https://json-server-lyrics-redirect-ftlhrr8jc-6ustav9.vercel.app/db.json';
 
   constructor(private http: HttpClient) {
     
@@ -23,9 +23,25 @@ export class SongsService {
     }),
   };
 
+  // getSongs(bandParam: any): Observable<Song[]> {
+  //   // return this.http.get<Song[]>(`${this.urlAPI}/songs?bandParam=${bandParam}`)
+  //   return this.http.get<any>(`${this.urlAPI}`).pipe(
+  //     map(response => response.songs)
+  //   );
+  // } 
+
   getSongs(bandParam: any): Observable<Song[]> {
-    return this.http.get<Song[]>(`${this.urlAPI}/songs?bandParam=${bandParam}`)
-  } 
+    return this.http.get<any>(`${this.urlAPI}`).pipe(
+      map(response => {
+        let songs = response.songs;
+        if (bandParam) {
+          songs = songs.filter((song: Song) => song.bandParam === bandParam);
+          console.log(songs)
+        }
+        return songs;
+      })
+    );
+  }
 }
 
 
