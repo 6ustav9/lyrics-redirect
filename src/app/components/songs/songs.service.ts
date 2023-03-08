@@ -10,7 +10,7 @@ import { Song } from './song';
 })
 export class SongsService {
 
-  urlAPI = 'https://json-server-lyrics-redirect-ftlhrr8jc-6ustav9.vercel.app/db.json';
+  urlAPI = 'https://json-server-lyrics-redirect.vercel.app/db.json';
 
   constructor(private http: HttpClient) {
     
